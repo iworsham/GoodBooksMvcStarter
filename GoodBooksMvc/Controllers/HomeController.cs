@@ -15,6 +15,8 @@ namespace GoodBooksMvc.Controllers
 
         public IActionResult Index()
         {
+            Response.Cookies.Append("Count", "Web Count");
+
             return View();
         }
 
@@ -28,5 +30,6 @@ namespace GoodBooksMvc.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }

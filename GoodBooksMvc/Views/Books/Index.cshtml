@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Book>
+
+<h1>Books</h1>
+
+@foreach (var book in Model)
+{
+    <button class="compare-button" onclick="CompareBooks(@book.Id)">Compare</button>
+}
